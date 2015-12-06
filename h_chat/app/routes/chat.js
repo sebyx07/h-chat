@@ -20,7 +20,7 @@ export default Ember.Route.extend({
   actions: {
     saveMessage: function(_message){
       const controller = this.get('controller');
-      const message = {payload: _message};
+      const message = {payload: _message, username: this.get('username')};
       this.get('chatChannel').push("new_message", message);
     }
   },

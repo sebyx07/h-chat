@@ -14,10 +14,18 @@ defmodule Backend.ChatChannel do
       message: %{
         id: time,
         createdAt: time,
-        user: 1,
+        user: params["username"] |> get_id,
         payload: params["payload"]
       }
     }
     {:reply, :ok, socket}
+  end
+
+  defp get_id("bianca") do
+    2
+  end
+
+  defp get_id(_) do
+    1
   end
 end
