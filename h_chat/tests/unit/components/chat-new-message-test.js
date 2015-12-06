@@ -1,7 +1,7 @@
 /* jshint expr:true */
 import { expect } from 'chai';
-import { describe } from 'mocha';
-import Ember  from 'ember';
+import { describe, beforeEach } from 'mocha';
+import Ember from 'ember';
 import sinon from 'sinon';
 import {
   describeComponent,
@@ -28,18 +28,26 @@ describeComponent(
 
     describe('actions', function(){
       describe('saveMessage', function(){
-        it('calls saveMessage', function(){
-          const sendActionSpy = sinon.spy(),
-              message = 'message',
-              saveMessage = 'saveMessage',
-              component = this.subject({
-                newMessage: message,
-                sendAction: sendActionSpy,
-                saveMessage:saveMessage
-              });
+        const sendActionSpy = sinon.spy(),
+            message = 'message',
+            saveMessage = 'saveMessage';
+        let component;
 
+        beforeEach(function(){
+          component = this.subject({
+            newMessage: message,
+            sendAction: sendActionSpy,
+            saveMessage:saveMessage
+          });
           Ember.run(()=> {component.send('saveMessage')});
+        });
+
+        it('calls saveMessage', function(){
           expect(sendActionSpy.calledWith(saveMessage, message)).to.be.true;
+        });
+
+        it('clears the newMessage', function(){
+          expect(component.get('newMessage')).to.eq('');
         });
       });
     });
