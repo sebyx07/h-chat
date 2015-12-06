@@ -18,9 +18,11 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    saveMessage: function(){
+    saveMessage: function(_message){
       const controller = this.get('controller');
+      const message = {payload: _message};
       controller.toggleProperty('scrollDown', true);
+      this.get('chatChannel').push("new_message", message);
     }
   },
 
@@ -34,14 +36,19 @@ export default Ember.Route.extend({
 
   connectSocket: function(){
     this.socket = new Socket("ws://localhost:4000/socket", {
-      params: {token: window.userToken},
-      logger: ((kind, msg, data) => { console.log(`${kind}: ${msg}`, data) })
+      params: {token: window.userToken}
     });
     const socket = this.get('socket');
     socket.connect();
+    this.set('chatChannel', socket.channel("chat"));
+    const chatChannel = this.get('chatChannel');
 
-    const chatChannel = socket.channel("chat");
     chatChannel.join()
         .receive("ok", resp => console.log(resp));
+
+    chatChannel.on("new_message", (resp)=>{
+      console.log(resp);
+      this.store.pushPayload(resp);
+    });
   }
 });

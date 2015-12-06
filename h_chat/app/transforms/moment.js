@@ -1,5 +1,5 @@
-import DS from "ember-data";
-import moment from 'npm:moment';
+import DS from 'ember-data';
+import moment from 'moment';
 import _ from 'npm:lodash';
 export default DS.Transform.extend({
   serialize: function(value) {
