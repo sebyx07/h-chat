@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export default Ember.Route.extend({
   model: function(params){
@@ -11,12 +12,14 @@ export default Ember.Route.extend({
   messages: function(){
     return [
       {
+        moment: moment(),
         payload: 'payload1',
         user: {
           username: 'user1'
         }
       },
       {
+        moment: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
