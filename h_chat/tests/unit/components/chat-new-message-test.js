@@ -39,7 +39,7 @@ describeComponent(
             sendAction: sendActionSpy,
             saveMessage:saveMessage
           });
-          Ember.run(()=> {component.send('saveMessage')});
+          Ember.run(()=> {component.send('saveMessage');});
         });
 
         it('calls saveMessage', function(){
