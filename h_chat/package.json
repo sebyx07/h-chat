@@ -41,6 +41,7 @@
     "ember-export-application-global": "^1.0.4",
     "ember-moment": "4.1.0",
     "ember-sass-bootstrap": "0.1.0",
+    "ember-sinon": "0.3.0",
     "install": "0.4.0"
   }
 }
