@@ -1,4 +1,4 @@
-defmodule Backend.Endpoint do
+  defmodule Backend.Endpoint do
   use Phoenix.Endpoint, otp_app: :backend
 
   socket "/socket", Backend.UserSocket
@@ -35,5 +35,6 @@ defmodule Backend.Endpoint do
     key: "_backend_key",
     signing_salt: "AuD9eaMe"
 
+  plug Corsica, [origins: ["http://localhost:4200"]]
   plug Backend.Router
 end

@@ -2,6 +2,6 @@ defmodule Backend.UserView do
   use Backend.Web, :view
 
   def render("index.json", %{contacts: users}) do
-    users
+    %{users: users}
   end
 end
