@@ -1,1 +1,9 @@
-{{moment-from-now message.createdAt interval=30001}} {{message.user.username}} => {{message.payload}}
+<span class="time">
+  {{moment-format message.createdAt 'hh:mm'}}
+</span>
+<span class="username">
+  {{message.user.username}}:
+</span>
+<span class="message">
+  {{message.payload}}
+</span>
