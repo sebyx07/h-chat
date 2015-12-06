@@ -21,7 +21,6 @@ export default Ember.Route.extend({
     saveMessage: function(_message){
       const controller = this.get('controller');
       const message = {payload: _message};
-      controller.toggleProperty('scrollDown', true);
       this.get('chatChannel').push("new_message", message);
     }
   },

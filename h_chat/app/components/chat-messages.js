@@ -4,11 +4,8 @@ export default Ember.Component.extend({
   classNames: ['well', 'chat-messages'],
 
   scrollDownEvent: function(){
-    const scrollDown = this.get('scrollDown');
-    if(scrollDown){
-      this._scrollDown();
-    }
-  }.observes('scrollDown'),
+    this._scrollDown();
+  }.observes('messages.@each'),
 
   didInsertElement: function(){
     Ember.run.scheduleOnce('afterRender', this, ()=> {
