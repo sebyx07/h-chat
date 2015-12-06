@@ -5,8 +5,8 @@ defmodule Backend.UserController do
 
   def index(conn, _params) do
     users = [
-      %{id: 1, username: "Sebi"},
-      %{id: 2, username: "Bianca"}
+      %{id: 1, username: "Sebi", status: 0},
+      %{id: 2, username: "Bianca", status: 0}
     ]
     render conn, contacts: users
   end
