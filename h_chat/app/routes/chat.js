@@ -10,6 +10,13 @@ export default Ember.Route.extend({
     });
   },
 
+  actions: {
+    saveMessage: function(){
+      const controller = this.get('controller');
+      controller.set('scrollDown', true);
+    }
+  },
+
   users: function(){
     return [
       {

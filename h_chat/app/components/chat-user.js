@@ -14,7 +14,7 @@ export default Ember.Component.extend({
       return userStatusGlyphcons.online;
     }
     if (status === 0) {
-      return userStatusGlyphcons.offline
+      return userStatusGlyphcons.offline;
     }
   }
   .property('user.status')
