@@ -18,16 +18,7 @@ export default Ember.Route.extend({
   },
 
   users: function(){
-    return [
-      {
-        status: 1,
-        username: 'sebi'
-      },
-      {
-        status: 0,
-        username: 'bianca'
-      }
-    ];
+    return this.store.findAll('user');
   },
 
   messages: function(){
