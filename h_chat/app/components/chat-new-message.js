@@ -5,8 +5,19 @@ export default Ember.Component.extend({
 
   actions: {
     saveMessage: function(){
-      this.sendAction('saveMessage', this.get('newMessage'));
-      this.set('newMessage', '');
+      var newMessage = this.get('newMessage');
+      if(this.checkMessageLength(newMessage)){
+        this.sendAction('saveMessage', newMessage);
+        this.set('newMessage', '');
+      }
     }
+  },
+
+  disabledNewMessage: function(){
+    return !this.checkMessageLength(this.get('newMessage'));
+  }.property('newMessage'),
+
+  checkMessageLength: function(message){
+    return message && message.length > 0;
   }
 });
