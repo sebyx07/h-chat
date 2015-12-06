@@ -14,7 +14,7 @@ defmodule Backend.ChatChannel do
       message: %{
         id: time,
         createdAt: time,
-        user: %{username: "anon"},
+        user: 1,
         payload: params["payload"]
       }
     }
