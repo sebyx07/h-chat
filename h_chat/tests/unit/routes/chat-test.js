@@ -27,7 +27,7 @@ describeModule(
           const spy = sinon.spy();
           const route = this.subject({
             controller: {
-              set: spy
+              toggleProperty: spy
             }
           });
 
