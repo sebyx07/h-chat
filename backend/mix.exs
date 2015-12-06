@@ -36,7 +36,8 @@ defmodule Backend.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:corsica, "~> 0.4"}
+     {:corsica, "~> 0.4"},
+     {:timex, "~> 1.0.0-rc3"}
      ]
   end
 
