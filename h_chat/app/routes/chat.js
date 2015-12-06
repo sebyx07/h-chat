@@ -5,8 +5,22 @@ export default Ember.Route.extend({
   model: function(params){
     return Ember.RSVP.hash({
       username: params.username,
-      messages: this.messages()
+      messages: this.messages(),
+      users:    this.users()
     });
+  },
+
+  users: function(){
+    return [
+      {
+        status: 1,
+        username: 'sebi'
+      },
+      {
+        status: 0,
+        username: 'bianca'
+      }
+    ]
   },
 
   messages: function(){

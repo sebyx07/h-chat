@@ -1,1 +1,6 @@
-{{yield}}
+<h4 class="text-center">
+  User status
+</h4>
+{{#each users as |user|}}
+  {{chat-user user=user}}
+{{/each}}
