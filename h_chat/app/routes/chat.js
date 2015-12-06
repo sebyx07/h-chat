@@ -39,5 +39,9 @@ export default Ember.Route.extend({
     });
     const socket = this.get('socket');
     socket.connect();
+
+    const chatChannel = socket.channel("chat");
+    chatChannel.join()
+        .receive("ok", resp => console.log(resp));
   }
 });
