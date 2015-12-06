@@ -5,6 +5,7 @@
 }
 
 .chat-message{
+  word-wrap: break-word;
   margin-bottom: 0.3em;
   .username{
     font-weight: bold;

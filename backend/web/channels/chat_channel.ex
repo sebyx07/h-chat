@@ -13,6 +13,7 @@ defmodule Backend.ChatChannel do
     broadcast! socket, "new_message", %{
       message: %{
         id: time,
+        createdAt: time,
         user: %{username: "anon"},
         payload: params["payload"]
       }
