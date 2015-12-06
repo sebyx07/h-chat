@@ -20,7 +20,7 @@ export default Ember.Route.extend({
         status: 0,
         username: 'bianca'
       }
-    ]
+    ];
   },
 
   messages: function(){
@@ -39,6 +39,6 @@ export default Ember.Route.extend({
           username: 'user2'
         }
       }
-    ]
+    ];
   }
 });
