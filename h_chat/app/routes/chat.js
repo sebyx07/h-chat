@@ -33,10 +33,11 @@ export default Ember.Route.extend({
   },
 
   connectSocket: function(){
-    this.socket = new Socket("/socket", {
+    this.socket = new Socket("ws://localhost:4000/socket", {
+      params: {token: window.userToken},
       logger: ((kind, msg, data) => { console.log(`${kind}: ${msg}`, data) })
     });
     const socket = this.get('socket');
-    socket.connect({user_name: this.get('username')});
+    socket.connect();
   }
 });
