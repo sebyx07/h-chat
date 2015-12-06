@@ -1,1 +1,3 @@
-{{chat-message message="omg" userName="username"}}
+{{#each messages as |message|}}
+  {{chat-message message=message}}
+{{/each}}
