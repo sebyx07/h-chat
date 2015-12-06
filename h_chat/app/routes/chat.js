@@ -13,7 +13,7 @@ export default Ember.Route.extend({
   actions: {
     saveMessage: function(){
       const controller = this.get('controller');
-      controller.toggleProperty('scrollDown');
+      controller.toggleProperty('scrollDown', true);
     }
   },
 
@@ -33,316 +33,316 @@ export default Ember.Route.extend({
   messages: function(){
     return [
       {
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload1',
         user: {
           username: 'user1'
         }
       },
       {
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },
       {
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },
       {
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
         }
       },{
-        moment: moment(),
+        createdAt: moment(),
         payload: 'payload2',
         user: {
           username: 'user2'
