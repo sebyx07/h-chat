@@ -1,8 +1,8 @@
 defmodule Backend.UserState do
   use GenServer
 
-  def start_link do
-    GenServer.start_link(__MODULE__, %{sebi: 0, bianca: 0})
+  def start_link(opts \\ []) do
+    GenServer.start_link(__MODULE__, [%{sebi: 0, bianca: 0}], opts)
   end
 
   def init(initial_val) do

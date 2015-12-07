@@ -3,6 +3,7 @@ defmodule Backend do
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
+
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
@@ -11,6 +12,7 @@ defmodule Backend do
       supervisor(Backend.Endpoint, []),
       # Start the Ecto repository
       worker(Backend.Repo, []),
+      worker(Backend.UserState, [name: UserState])
       # Here you could define other workers and supervisors as children
       # worker(Backend.Worker, [arg1, arg2, arg3]),
     ]
