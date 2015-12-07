@@ -19,5 +19,13 @@ export default Ember.Component.extend({
 
   checkMessageLength: function(message){
     return message && message.length > 0;
+  },
+
+  didInsertElement: function(){
+    Ember.run.scheduleOnce('afterRender', this, ()=> {
+      this.$('._emojione').each(function(){
+        this.innerHTML = emojione.shortnameToImage(this.innerHTML);
+      });
+    });
   }
 });
